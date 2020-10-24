@@ -1,38 +1,220 @@
-.App {
+
+.container {
+  margin: 10px auto;
   text-align: center;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  padding: 30px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.postCard {
+  margin: 10px 10px auto;
+  padding: 8px;
+  display: inline-flex-box;
+  border: 2px solid #f4f4f4;
+  text-align: center;
+  box-shadow: 1px 2px #ccc;
+  border-radius: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.body {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
+}
+/* Comment Button Style*/
+.btnComment {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid #5f6ef1;
+  border-radius: 0.6em;
+  color: #5f6ef1;
+  cursor: pointer;
+  display: flex;
+  align-self: center; 
+  line-height: .30;
+  margin: 5px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+} 
+.btnComment:hover,
+btnComment:focus {
+    color: #fff;
+    outline: 0;
+  }
+
+.comment {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.comment:hover {
+  box-shadow: 0 0 40px 40px #5f6ef1 inset;
 }
 
-.App-link {
-  color: #61dafb;
+/* Edit Button Style*/
+.btnEdit {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid #3fd194;
+  border-radius: 0.6em;
+  color: #3fd194;
+  cursor: pointer;
+  display: flex;
+  align-self: center; 
+  line-height: .3;
+  margin: 5px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+} 
+.btnEdit:hover,
+btnEdit:focus {
+    color: #fff;
+    outline: 0;
+  }
+
+.edit {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.edit:hover {
+  box-shadow: 0 0 40px 40px #3fd194 inset;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* Delete Button Style*/
+.btnDelete {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+  display: flex;
+  align-self: center; 
+  line-height: .3;
+  margin: 5px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+} 
+.btnDelete:hover,
+btnDelete:focus {
+    color: #fff;
+    outline: 0;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+.delete {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.delete:hover {
+  box-shadow: 0 0 40px 40px #e74c3c inset;
+}
+
+
+
+
+/*Clearing Floats*/
+.cf:before, .cf:after{
+  content:"";
+  display:table;
+}
+
+.cf:after{
+  clear:both;
+}
+
+.cf{
+  zoom:1;
+}    
+/* Form wrapper styling */
+
+.update-wrapper {
+  width: 80%;
+  margin: 50px auto 50px auto;
+  border-radius: 10px;
+  background: transparent;
+  box-shadow: 0 4px 20px -2px #e9e9e9;
+}
+
+/* Form text input */
+
+.update-wrapper input {
+padding-left: 20px;
+  width: 70%;
+  height: 20px;
+  padding: 10px 5px;
+  float: left;   
+  /*font: bold 13px 'lucida sans', 'trebuchet MS', 'Tahoma';*/
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  border: 0;
+  background: #fff;
+  border-radius: 10px;
+  border-top-style: none;
+}
+
+.update-wrapper input:focus {
+  outline: 0;
+  background: #fff;
+  box-shadow: 0 0 2px rgba(0,0,0,0.8) inset;
+}
+
+
+/* Form submit button */
+.update-wrapper button {
+  overflow: visible;
+  position: relative;
+  float: right;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 110px;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  background: #198cff;
+  border-radius: 0px 10px 10px 0px;
+  text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+}  
+
+.update-wrapper button:active,
+.update-wrapper button:focus{  
+  background: #198cff;
+  outline: 0;  
+}
+
+.update-wrapper button:focus:before,
+.update-wrapper button:active:before{
+      border-right-color: #c42f2f;
+}     
+
+.update-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
+  border: 0;
+  padding: 0;
+}   
+
+.list {
+  list-style-type: square;
+  text-align: left;
+
 }
